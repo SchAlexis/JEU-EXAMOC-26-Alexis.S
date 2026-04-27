@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="EXAM JEU Alexis"
+config/name="Exam JEU Alexis"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -21,4 +21,3 @@ config/icon="res://icon.svg"
 [rendering]
 
 rendering_device/driver.windows="d3d12"
-renderer/rendering_method="forward_plus"
