@@ -11,6 +11,7 @@ sky_material = SubResource("ProceduralSkyMaterial_glv2v")
 
 [sub_resource type="Environment" id="Environment_r0du0"]
 background_mode = 2
+background_energy_multiplier = 0.3
 sky = SubResource("Sky_uu6xs")
 tonemap_mode = 2
 glow_enabled = true
@@ -21,8 +22,9 @@ albedo_color = Color(0.60933006, 0.6093301, 0.60933006, 1)
 [node name="Node3D" type="Node3D" unique_id=1607302907]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2063974683]
-transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 2.8836207, 0)
 light_color = Color(1, 0.8901961, 1, 1)
+light_energy = 0.1
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=79074618]
@@ -36,6 +38,10 @@ material = SubResource("StandardMaterial3D_uu6xs")
 
 [node name="Player" parent="." unique_id=1459446107 instance=ExtResource("1_glv2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.028395891, 0, 0.03848636)
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+speed = 15.0
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1907863331]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -6)
@@ -54,3 +60,5 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.5,
 use_collision = true
 size = Vector3(10, 3, 1)
 material = ExtResource("1_uu6xs")
+
+[editable path="Player"]
