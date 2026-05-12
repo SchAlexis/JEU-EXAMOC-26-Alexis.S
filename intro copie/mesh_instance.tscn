@@ -1,0 +1,113 @@
+[gd_scene format=3 uid="uid://bpwl3jaq52ovk"]
+
+[ext_resource type="Script" uid="uid://83quv7pxa6yv" path="res://label_3d.gd" id="1_cuixc"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_cgcvp"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_cuixc"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_0oxux"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_5bpbn"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_u7mv8"]
+
+[sub_resource type="PrismMesh" id="PrismMesh_1m4wr"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_cyw87"]
+
+[sub_resource type="TorusMesh" id="TorusMesh_5pcjf"]
+
+[sub_resource type="TextMesh" id="TextMesh_ry3fd"]
+text = "GOUGOUGAGA"
+
+[node name="MeshInstance" type="Node3D" unique_id=970664079]
+
+[node name="BoxMesh" type="MeshInstance3D" parent="." unique_id=1580385048]
+mesh = SubResource("BoxMesh_cgcvp")
+
+[node name="Label3D" type="Label3D" parent="BoxMesh" unique_id=1026579692]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+billboard = 2
+text = "BoxMesh"
+script = ExtResource("1_cuixc")
+
+[node name="CapsuleMesh" type="MeshInstance3D" parent="." unique_id=1505277199]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+mesh = SubResource("CapsuleMesh_cuixc")
+
+[node name="Label3D" type="Label3D" parent="CapsuleMesh" unique_id=414551303]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+billboard = 2
+text = "CapsuleMesh"
+script = ExtResource("1_cuixc")
+
+[node name="CylinderMesh" type="MeshInstance3D" parent="." unique_id=1506003839]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+mesh = SubResource("CylinderMesh_0oxux")
+
+[node name="Label3D" type="Label3D" parent="CylinderMesh" unique_id=718602434]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+billboard = 2
+text = "CylinderMesh"
+script = ExtResource("1_cuixc")
+
+[node name="PlaneMesh" type="MeshInstance3D" parent="." unique_id=421611464]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+mesh = SubResource("PlaneMesh_5bpbn")
+
+[node name="Label3D" type="Label3D" parent="PlaneMesh" unique_id=334449508]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+billboard = 2
+text = "PlaneMesh"
+script = ExtResource("1_cuixc")
+
+[node name="QuadMesh" type="MeshInstance3D" parent="." unique_id=990188857]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
+mesh = SubResource("QuadMesh_u7mv8")
+
+[node name="Label3D" type="Label3D" parent="QuadMesh" unique_id=767914296]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+billboard = 2
+text = "QuadMesh"
+script = ExtResource("1_cuixc")
+
+[node name="PrismMesh" type="MeshInstance3D" parent="." unique_id=332168149]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 2)
+mesh = SubResource("PrismMesh_1m4wr")
+
+[node name="Label3D2" type="Label3D" parent="PrismMesh" unique_id=51032330]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+billboard = 2
+text = "PrismMesh"
+script = ExtResource("1_cuixc")
+
+[node name="ShpereMesh" type="MeshInstance3D" parent="." unique_id=2147123484]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.5)
+mesh = SubResource("SphereMesh_cyw87")
+
+[node name="Label3D" type="Label3D" parent="ShpereMesh" unique_id=1514466509]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+billboard = 2
+text = "ShpereMesh"
+script = ExtResource("1_cuixc")
+
+[node name="TorusMesh" type="MeshInstance3D" parent="." unique_id=134965226]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 4.5)
+mesh = SubResource("TorusMesh_5pcjf")
+
+[node name="Label3D" type="Label3D" parent="TorusMesh" unique_id=567300794]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+billboard = 2
+text = "TorusMesh"
+script = ExtResource("1_cuixc")
+
+[node name="TextMesh" type="MeshInstance3D" parent="." unique_id=1183820954]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4.5)
+mesh = SubResource("TextMesh_ry3fd")
+
+[node name="Label3D" type="Label3D" parent="TextMesh" unique_id=1299277872]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+billboard = 2
+text = "TextMesh"
+script = ExtResource("1_cuixc")

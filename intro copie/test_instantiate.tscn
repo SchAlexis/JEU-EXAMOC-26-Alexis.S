@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bs0ipknaw20jj"]
+
+[ext_resource type="Script" uid="uid://bhbpori8q55i4" path="res://addons/instantiate.gd" id="1_1cpi2"]
+
+[node name="TestInstantiate" type="Node3D" unique_id=665406979]
+
+[node name="Instantiate" type="CSGCombiner3D" parent="." unique_id=368691918]
+script = ExtResource("1_1cpi2")
+metadata/_custom_type_script = "uid://bhbpori8q55i4"

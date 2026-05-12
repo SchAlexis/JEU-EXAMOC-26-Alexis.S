@@ -1,0 +1,129 @@
+[gd_scene format=3 uid="uid://chviuvofqe3sl"]
+
+[node name="container" type="Control" unique_id=1823813970]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=116377465]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 231.0
+offset_right = 459.0
+offset_bottom = 277.0
+
+[node name="Button" type="Button" parent="HBoxContainer" unique_id=2031527301]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Button"
+
+[node name="Button2" type="Button" parent="HBoxContainer" unique_id=2084155211]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Button"
+
+[node name="Button3" type="Button" parent="HBoxContainer" unique_id=1662531622]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Button"
+
+[node name="Button4" type="Button" parent="HBoxContainer" unique_id=789084809]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Button"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=67775914]
+layout_mode = 0
+offset_top = 49.0
+offset_right = 40.0
+offset_bottom = 89.0
+
+[node name="Button3" type="Button" parent="VBoxContainer" unique_id=992458524]
+layout_mode = 2
+text = "Button"
+
+[node name="Button4" type="Button" parent="VBoxContainer" unique_id=221036431]
+layout_mode = 2
+text = "Button"
+
+[node name="FlowContainer" type="FlowContainer" parent="." unique_id=1882582100]
+layout_mode = 0
+offset_left = 170.0
+offset_top = 64.0
+offset_right = 369.0
+offset_bottom = 130.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="FlowContainer" unique_id=733043588]
+layout_mode = 2
+
+[node name="Button5" type="Button" parent="FlowContainer/VBoxContainer" unique_id=458202901]
+layout_mode = 2
+text = "Button"
+
+[node name="Button6" type="Button" parent="FlowContainer/VBoxContainer" unique_id=1350680744]
+layout_mode = 2
+text = "Button"
+
+[node name="Button7" type="Button" parent="FlowContainer/VBoxContainer" unique_id=1088696756]
+layout_mode = 2
+text = "Button"
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=1720894305]
+layout_mode = 0
+offset_left = 259.0
+offset_top = -3.0
+offset_right = 402.0
+offset_bottom = 63.0
+columns = 3
+
+[node name="Button8" type="Button" parent="GridContainer" unique_id=1122359334]
+layout_mode = 2
+text = "Button"
+
+[node name="Button9" type="Button" parent="GridContainer" unique_id=738251268]
+layout_mode = 2
+text = "Button"
+
+[node name="Button11" type="Button" parent="GridContainer" unique_id=1159057563]
+layout_mode = 2
+text = "Button"
+
+[node name="HSplitContainer" type="HSplitContainer" parent="." unique_id=1305996914]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 126.0
+offset_right = 350.0
+offset_bottom = 213.0
+
+[node name="Button9" type="Button" parent="HSplitContainer" unique_id=1294961032]
+layout_mode = 2
+text = "Button"
+
+[node name="Button10" type="Button" parent="HSplitContainer" unique_id=926485408]
+layout_mode = 2
+text = "Button"
+
+[node name="FoldableContainer" type="FoldableContainer" parent="." unique_id=89170729]
+layout_mode = 0
+offset_left = 430.0
+offset_top = 138.0
+offset_right = 521.0
+offset_bottom = 271.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="FoldableContainer" unique_id=2017055621]
+layout_mode = 2
+
+[node name="Button10" type="Button" parent="FoldableContainer/VBoxContainer" unique_id=1761984334]
+layout_mode = 2
+text = "Button"
+
+[node name="Button11" type="Button" parent="FoldableContainer/VBoxContainer" unique_id=1883167983]
+layout_mode = 2
+text = "Button"
+
+[node name="Button12" type="Button" parent="FoldableContainer/VBoxContainer" unique_id=1921425303]
+layout_mode = 2
+text = "Button"

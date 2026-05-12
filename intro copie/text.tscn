@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://df8orfddgbpv6"]
+
+[ext_resource type="Script" uid="uid://derx3ilx6dmyk" path="res://texteditor.gd" id="1_aohfb"]
+
+[node name="texteditor" type="Control" unique_id=2136932848]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_aohfb")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=989835472]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 25.0
+offset_right = 155.0
+offset_bottom = 136.0
+
+[node name="new" type="Button" parent="VBoxContainer" unique_id=1774094400]
+layout_mode = 2
+size_flags_vertical = 3
+text = "NEW"
+
+[node name="load" type="Button" parent="VBoxContainer" unique_id=588970710]
+layout_mode = 2
+size_flags_vertical = 3
+text = "LOAD"
+
+[node name="save" type="Button" parent="VBoxContainer" unique_id=898490896]
+layout_mode = 2
+size_flags_vertical = 3
+text = "SAVE"
+
+[node name="TextEdit" type="TextEdit" parent="." unique_id=1424769993]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -956.0
+grow_horizontal = 0
+grow_vertical = 2
+placeholder_text = "Enter Text"
+
+[node name="open file" type="FileDialog" parent="." unique_id=400456605]
+oversampling_override = 1.0
+title = "Open a File"
+initial_position = 1
+file_mode = 0
+
+[node name="save" type="FileDialog" parent="." unique_id=391510836]
+oversampling_override = 1.0
+initial_position = 1
+
+[connection signal="button_down" from="VBoxContainer/new" to="." method="_on_new_button_down"]
+[connection signal="button_down" from="VBoxContainer/load" to="." method="_on_load_button_down"]
+[connection signal="button_down" from="VBoxContainer/save" to="." method="_on_save_button_down"]
+[connection signal="files_selected" from="save" to="." method="_on_open_file_files_selected"]

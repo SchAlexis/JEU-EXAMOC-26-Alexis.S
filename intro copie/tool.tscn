@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://bgmxqtgrxi8xs"]
+
+[ext_resource type="Script" uid="uid://bctj5353aaog1" path="res://rotate.gd" id="1_f6vxs"]
+[ext_resource type="Script" uid="uid://bq2upl82gtil5" path="res://move.gd" id="2_3gk12"]
+[ext_resource type="Script" uid="uid://4qbqbwveigw7" path="res://camera_3d.gd" id="2_n5j8b"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7cqlo"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_f6vxs"]
+sky_material = SubResource("ProceduralSkyMaterial_7cqlo")
+
+[sub_resource type="Environment" id="Environment_3gk12"]
+background_mode = 2
+sky = SubResource("Sky_f6vxs")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="tool" type="Node3D" unique_id=1304423991]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=783164764]
+environment = SubResource("Environment_3gk12")
+
+[node name="rotate" type="CSGBox3D" parent="." unique_id=645637492]
+transform = Transform3D(1, 0, 0, 0, -0.540548, -0.84131306, 0, 0.84131306, -0.540548, 0, 0.5, 0)
+script = ExtResource("1_f6vxs")
+speed = 10000
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1489239850]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+script = ExtResource("2_n5j8b")
+
+[node name="move" type="CSGBox3D" parent="." unique_id=1660942956]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 2.4741495, 0.41772583, 0)
+script = ExtResource("2_3gk12")
+amplitude = 3
+frequence = 2
+
+[node name="move2" type="CSGBox3D" parent="." unique_id=1680276978]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -0.932152, 0.41772583, -3)
+script = ExtResource("2_3gk12")
+amplitude = 2

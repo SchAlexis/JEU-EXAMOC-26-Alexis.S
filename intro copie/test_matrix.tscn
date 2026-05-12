@@ -1,0 +1,122 @@
+[gd_scene format=3 uid="uid://2rfm838e4c8s"]
+
+[ext_resource type="Script" uid="uid://b3cubusmnciy2" path="res://addons/instantiate_matrix.gd" id="1_ajxjt"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_swywt"]
+albedo_color = Color(14.222716, 0, 13.558224, 1)
+
+[node name="TestMatrix" type="Node3D" unique_id=1215328523]
+
+[node name="InstantiateMatrix" type="CSGCombiner3D" parent="." unique_id=1007370468]
+script = ExtResource("1_ajxjt")
+material = SubResource("StandardMaterial3D_swywt")
+repeat = Vector3i(3, 3, 3)
+step = Vector3(1, 10, 1)
+metadata/_custom_type_script = "uid://b3cubusmnciy2"
+
+[node name="Box" type="CSGBox3D" parent="InstantiateMatrix" unique_id=941633236]
+material = SubResource("StandardMaterial3D_swywt")
+
+[node name="Box2" type="CSGBox3D" parent="InstantiateMatrix" unique_id=1805111818]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+material = SubResource("StandardMaterial3D_swywt")
+
+[node name="Box3" type="CSGBox3D" parent="InstantiateMatrix" unique_id=258891276]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+material = SubResource("StandardMaterial3D_swywt")
+
+[node name="Box4" type="CSGBox3D" parent="InstantiateMatrix" unique_id=779956495]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+material = SubResource("StandardMaterial3D_swywt")
+
+[node name="Box5" type="CSGBox3D" parent="InstantiateMatrix" unique_id=559128820]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 2)
+material = SubResource("StandardMaterial3D_swywt")
+
+[node name="Box6" type="CSGBox3D" parent="InstantiateMatrix" unique_id=1399046200]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 4)
+material = SubResource("StandardMaterial3D_swywt")
+
+[node name="Box7" type="CSGBox3D" parent="InstantiateMatrix" unique_id=1839428471]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+material = SubResource("StandardMaterial3D_swywt")
+
+[node name="Box8" type="CSGBox3D" parent="InstantiateMatrix" unique_id=1955746765]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 2)
+material = SubResource("StandardMaterial3D_swywt")
+
+[node name="Box9" type="CSGBox3D" parent="InstantiateMatrix" unique_id=724267689]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 4)
+material = SubResource("StandardMaterial3D_swywt")
+
+[node name="Box10" type="CSGBox3D" parent="InstantiateMatrix" unique_id=1091044972]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+material = SubResource("StandardMaterial3D_swywt")
+
+[node name="Box11" type="CSGBox3D" parent="InstantiateMatrix" unique_id=89214991]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
+material = SubResource("StandardMaterial3D_swywt")
+
+[node name="Box12" type="CSGBox3D" parent="InstantiateMatrix" unique_id=386410686]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 4)
+material = SubResource("StandardMaterial3D_swywt")
+
+[node name="Box13" type="CSGBox3D" parent="InstantiateMatrix" unique_id=647416877]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2, 0)
+material = SubResource("StandardMaterial3D_swywt")
+
+[node name="Box14" type="CSGBox3D" parent="InstantiateMatrix" unique_id=2006492950]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2, 2)
+material = SubResource("StandardMaterial3D_swywt")
+
+[node name="Box15" type="CSGBox3D" parent="InstantiateMatrix" unique_id=1651667820]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2, 4)
+material = SubResource("StandardMaterial3D_swywt")
+
+[node name="Box16" type="CSGBox3D" parent="InstantiateMatrix" unique_id=1141007854]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 4, 0)
+material = SubResource("StandardMaterial3D_swywt")
+
+[node name="Box17" type="CSGBox3D" parent="InstantiateMatrix" unique_id=1671814375]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 4, 2)
+material = SubResource("StandardMaterial3D_swywt")
+
+[node name="Box18" type="CSGBox3D" parent="InstantiateMatrix" unique_id=1348353243]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 4, 4)
+material = SubResource("StandardMaterial3D_swywt")
+
+[node name="Box19" type="CSGBox3D" parent="InstantiateMatrix" unique_id=1561471467]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+material = SubResource("StandardMaterial3D_swywt")
+
+[node name="Box20" type="CSGBox3D" parent="InstantiateMatrix" unique_id=1570484482]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 2)
+material = SubResource("StandardMaterial3D_swywt")
+
+[node name="Box21" type="CSGBox3D" parent="InstantiateMatrix" unique_id=459381492]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+material = SubResource("StandardMaterial3D_swywt")
+
+[node name="Box22" type="CSGBox3D" parent="InstantiateMatrix" unique_id=1262405835]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 2, 0)
+material = SubResource("StandardMaterial3D_swywt")
+
+[node name="Box23" type="CSGBox3D" parent="InstantiateMatrix" unique_id=2062136272]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 2, 2)
+material = SubResource("StandardMaterial3D_swywt")
+
+[node name="Box24" type="CSGBox3D" parent="InstantiateMatrix" unique_id=1784260365]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 2, 4)
+material = SubResource("StandardMaterial3D_swywt")
+
+[node name="Box25" type="CSGBox3D" parent="InstantiateMatrix" unique_id=239233323]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 4, 0)
+material = SubResource("StandardMaterial3D_swywt")
+
+[node name="Box26" type="CSGBox3D" parent="InstantiateMatrix" unique_id=1140823329]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 4, 2)
+material = SubResource("StandardMaterial3D_swywt")
+
+[node name="Box27" type="CSGBox3D" parent="InstantiateMatrix" unique_id=1773915805]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 4, 4)
+material = SubResource("StandardMaterial3D_swywt")

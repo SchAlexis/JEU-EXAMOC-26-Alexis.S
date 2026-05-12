@@ -1,0 +1,123 @@
+[gd_scene format=3 uid="uid://dvxr02oti2gxr"]
+
+[ext_resource type="Script" uid="uid://c1a80dg4nt1lx" path="res://button.gd" id="1_n4tde"]
+[ext_resource type="Texture2D" uid="uid://bryebcciej22q" path="res://icon.svg" id="1_r04n3"]
+
+[sub_resource type="Gradient" id="Gradient_n4tde"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_vxja4"]
+gradient = SubResource("Gradient_n4tde")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_lt4la"]
+
+[sub_resource type="Gradient" id="Gradient_4amfo"]
+colors = PackedColorArray(0.99999994, 0.24545357, 0.3507556, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_2kp8h"]
+gradient = SubResource("Gradient_4amfo")
+
+[node name="button" type="Control" unique_id=1421252174]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CheckBox" type="CheckBox" parent="." unique_id=1946430836]
+layout_mode = 0
+offset_top = 31.0
+offset_right = 62.0
+offset_bottom = 62.0
+text = "CheckButton"
+
+[node name="CheckButton" type="CheckButton" parent="." unique_id=1862185107]
+layout_mode = 0
+offset_top = 55.0
+offset_right = 44.0
+offset_bottom = 79.0
+text = "Checkbutton"
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="." unique_id=1557847538]
+layout_mode = 0
+offset_left = 102.0
+offset_right = 110.0
+offset_bottom = 8.0
+text = "ColorButton"
+
+[node name="MenuButton" type="MenuButton" parent="." unique_id=1661196953]
+layout_mode = 0
+offset_top = 81.0
+offset_right = 106.0
+offset_bottom = 112.0
+text = "Menubutton"
+
+[node name="OptionButton" type="OptionButton" parent="." unique_id=404983207]
+layout_mode = 0
+offset_top = 108.0
+offset_right = 95.0
+offset_bottom = 139.0
+item_count = 2
+popup/item_0/text = "Option0"
+popup/item_0/id = 0
+popup/item_1/text = "Option1"
+popup/item_1/id = 1
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=528253149]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 41.0
+offset_right = 406.0
+offset_bottom = 44.171093
+scale = Vector2(1, 13.559998)
+texture_normal = SubResource("GradientTexture1D_vxja4")
+texture_pressed = SubResource("ViewportTexture_lt4la")
+texture_hover = ExtResource("1_r04n3")
+texture_disabled = SubResource("GradientTexture1D_2kp8h")
+stretch_mode = 0
+
+[node name="LinkButton" type="LinkButton" parent="." unique_id=743332418]
+layout_mode = 0
+offset_left = 146.0
+offset_top = 87.0
+offset_right = 232.0
+offset_bottom = 127.0
+text = "Linkbutton"
+uri = "https://godotengine.org/fr/"
+
+[node name="Container" type="Container" parent="." unique_id=1974533035]
+layout_mode = 0
+offset_left = 385.0
+offset_top = 94.0
+offset_right = 575.0
+offset_bottom = 141.0
+
+[node name="Button" type="Button" parent="Container" unique_id=1540560798]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Button"
+script = ExtResource("1_n4tde")
+
+[node name="Button2" type="Button" parent="Container" unique_id=93307063]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Button"
+script = ExtResource("1_n4tde")
+
+[node name="Button3" type="Button" parent="Container" unique_id=275323646]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Button"
+script = ExtResource("1_n4tde")
+
+[connection signal="color_changed" from="ColorPickerButton" to="Container/Button" method="_on_color_picker_button_color_changed"]
+[connection signal="item_selected" from="OptionButton" to="Container/Button" method="_on_option_button_item_selected"]
+[connection signal="button_down" from="Container/Button" to="Container/Button" method="_on_button_down"]
+[connection signal="button_up" from="Container/Button" to="Container/Button" method="_on_button_up"]
+[connection signal="pressed" from="Container/Button" to="Container/Button" method="_on_pressed"]
+[connection signal="button_down" from="Container/Button2" to="Container/Button2" method="_on_button_down"]
+[connection signal="button_up" from="Container/Button2" to="Container/Button2" method="_on_button_up"]
+[connection signal="pressed" from="Container/Button2" to="Container/Button2" method="_on_pressed"]
+[connection signal="button_down" from="Container/Button3" to="Container/Button3" method="_on_button_down"]
+[connection signal="button_up" from="Container/Button3" to="Container/Button3" method="_on_button_up"]
+[connection signal="pressed" from="Container/Button3" to="Container/Button3" method="_on_pressed"]

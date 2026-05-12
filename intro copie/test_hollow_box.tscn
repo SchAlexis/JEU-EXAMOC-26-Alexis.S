@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://w12s4m3lbuak"]
+
+[ext_resource type="Script" uid="uid://c4s3p6qtyk0oe" path="res://addons/hollow_box.gd" id="1_hrdi2"]
+
+[node name="TestHollowBox" type="Node3D" unique_id=2103719036]
+
+[node name="HollowBox2" type="CSGBox3D" parent="." unique_id=1146343838]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 0.024518967, 0.75, -0.22548097)
+size = Vector3(2.5, 2.5, 2.5)
+script = ExtResource("1_hrdi2")
+metadata/_custom_type_script = "uid://c4s3p6qtyk0oe"
+
+[node name="HollowBox3" type="CSGBox3D" parent="." unique_id=260809434]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 1.024519, 1.75, -0.725481)
+size = Vector3(2.5, 1.5, 2.5)
+script = ExtResource("1_hrdi2")
+metadata/_custom_type_script = "uid://c4s3p6qtyk0oe"

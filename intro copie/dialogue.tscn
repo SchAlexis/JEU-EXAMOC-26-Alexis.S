@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://us6qtrxsy8yk"]
+
+[ext_resource type="Script" uid="uid://ktskv6ugeh6" path="res://dialogue.gd" id="1_kp46k"]
+
+[node name="Dialogue" type="Node" unique_id=833294609]
+script = ExtResource("1_kp46k")
+
+[node name="ConfirmationDialog" type="ConfirmationDialog" parent="." unique_id=5368369]
+oversampling_override = 1.0
+position = Vector2i(50, 300)
+visible = true
+dialog_text = "Are you sure to delete"
+
+[node name="AcceptDialog" type="AcceptDialog" parent="." unique_id=954361521]
+oversampling_override = 1.0
+position = Vector2i(50, 50)
+size = Vector2i(247, 100)
+visible = true
+dialog_text = "Vous devez définir une entrée"
+
+[node name="FileDialog" type="FileDialog" parent="." unique_id=1865381630]
+oversampling_override = 1.0
+initial_position = 1
+visible = true
+filters = PackedStringArray("*.gd", "*.txt")
+
+[connection signal="canceled" from="ConfirmationDialog" to="." method="_on_accept_dialog_canceled"]
+[connection signal="confirmed" from="ConfirmationDialog" to="." method="_on_accept_dialog_confirmed"]
+[connection signal="canceled" from="AcceptDialog" to="." method="_on_accept_dialog_canceled"]
+[connection signal="confirmed" from="AcceptDialog" to="." method="_on_accept_dialog_confirmed"]
+[connection signal="dir_selected" from="FileDialog" to="." method="_on_file_dialog_dir_selected"]
+[connection signal="file_selected" from="FileDialog" to="." method="_on_file_dialog_file_selected"]

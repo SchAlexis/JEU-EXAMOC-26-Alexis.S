@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://b1f2o2kykps80"]
+
+[ext_resource type="Script" uid="uid://bwktyin7ah61r" path="res://text.gd" id="1_a202f"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4xowi"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_a202f"]
+sky_material = SubResource("ProceduralSkyMaterial_4xowi")
+
+[sub_resource type="Environment" id="Environment_noarx"]
+background_mode = 2
+sky = SubResource("Sky_a202f")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="LabelSettings" id="LabelSettings_4xowi"]
+font_size = 45
+
+[node name="text" type="Node3D" unique_id=705904058]
+script = ExtResource("1_a202f")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1284045966]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1105256639]
+environment = SubResource("Environment_noarx")
+
+[node name="Label3D" type="Label3D" parent="." unique_id=401934888]
+billboard = 2
+text = "Label3d"
+
+[node name="Label" type="Label" parent="." unique_id=1124447876]
+offset_left = 13.0
+offset_top = 435.0
+offset_right = 1654.0
+offset_bottom = 652.0
+text = "A control for displaying plain text. It gives you control over the horizontal and vertical alignment and can wrap the text inside the node's bounding rectangle. It doesn't support bold, italics, or other rich text formatting. For that, use RichTextLabel instead."
+label_settings = SubResource("LabelSettings_4xowi")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1243281312]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)

@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://c8ljiqtodfnkd"]
+
+[ext_resource type="Script" uid="uid://dupcbe082su" path="res://addons/hollow_tube.gd" id="1_7ayxr"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7ayxr"]
+albedo_color = Color(0.8334226, 0.7192226, 0.26324514, 1)
+
+[node name="TestHollowTube" type="Node3D" unique_id=762647618]
+
+[node name="HollowTube" type="CSGCylinder3D" parent="." unique_id=2100587450]
+transform = Transform3D(0.8660254, -0.35355338, -0.35355338, 0, -0.70710677, 0.70710677, -0.5, -0.6123724, -0.6123724, -1.5, 0, -1)
+radius = 1.5
+sides = 25
+script = ExtResource("1_7ayxr")
+metadata/_custom_type_script = "uid://dupcbe082su"
+
+[node name="HollowTube" type="CSGCylinder3D" parent="HollowTube" unique_id=1830189856]
+transform = Transform3D(0.997684, 0.055915594, 0.038735718, -0.055790633, 0.99843335, -0.004311651, -0.0389162, 0.0021406412, 0.9992404, -0.24999976, -0.3061862, -0.3061862)
+sides = 18
+script = ExtResource("1_7ayxr")
+metadata/_custom_type_script = "uid://dupcbe082su"
+
+[node name="HollowTube2" type="CSGCylinder3D" parent="." unique_id=1439591399]
+transform = Transform3D(1.0000001, 0, 0, 0, 0.99999994, 0, 0, 0, 1.0000001, -1.4999998, 0, 2.4999998)
+material = SubResource("StandardMaterial3D_7ayxr")
+script = ExtResource("1_7ayxr")
+metadata/_custom_type_script = "uid://dupcbe082su"

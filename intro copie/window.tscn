@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://b7qw708p0v60p"]
+
+[node name="Window" type="Node" unique_id=1506787883]
+
+[node name="Window" type="Window" parent="." unique_id=249193219]
+oversampling_override = 1.0
+title = "My Window"
+position = Vector2i(50, 50)
+size = Vector2i(400, 300)
+
+[node name="Button" type="Button" parent="Window" unique_id=1211437252]
+offset_left = 92.0
+offset_top = 77.0
+offset_right = 162.0
+offset_bottom = 108.0
+text = "Button"
+
+[node name="Window2" type="Window" parent="." unique_id=1427286259]
+oversampling_override = 1.0
+title = "Text editor"
+position = Vector2i(80, 80)
+size = Vector2i(400, 300)
+
+[node name="TextEdit" type="TextEdit" parent="Window2" unique_id=1216566837]
+offset_left = 87.0
+offset_top = 56.0
+offset_right = 263.0
+offset_bottom = 160.0
+placeholder_text = "please enter text"
+
+[node name="Window3" type="Window" parent="." unique_id=303575229]
+oversampling_override = 1.0
+title = "Color Rect"
+position = Vector2i(110, 110)
+size = Vector2i(400, 300)
+
+[node name="ColorRect" type="ColorRect" parent="Window3" unique_id=632160498]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.7898333, 0.029999971, 1, 1)
