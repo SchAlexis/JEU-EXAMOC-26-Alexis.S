@@ -1,0 +1,669 @@
+[gd_scene format=3 uid="uid://cscg36pk42owd"]
+
+[ext_resource type="Script" uid="uid://y81ibjg5qxdy" path="res://player_n.gd" id="1_33d3s"]
+[ext_resource type="Material" uid="uid://ds2xh4padmpci" path="res://PlayerNColor.tres" id="1_hwxmi"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_33d3s"]
+albedo_color = Color(0.18431373, 0.9882353, 0.24705882, 1)
+metallic = 0.1
+metallic_texture_channel = 1
+roughness = 0.55
+roughness_texture_channel = 1
+emission_enabled = true
+emission = Color(0.34117648, 0.9254902, 0, 1)
+emission_energy_multiplier = 0.1
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hwxmi"]
+
+[sub_resource type="Animation" id="Animation_o8dsa"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CSGSphere3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.5, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CSGSphere3D:material")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("StandardMaterial3D_33d3s")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CSGSphere3D:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.7007, 0.7007, 0.7007)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D27:height")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.389]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D25:height")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.389]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D23:height")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.389]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D21:height")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.389]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D19:height")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.389]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D17:height")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.389]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D15:height")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.389]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D13:height")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.389]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D11:height")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.389]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D9:height")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.389]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D6:height")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.389]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D5:height")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.389]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D:height")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.389]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D4:height")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.389]
+}
+
+[sub_resource type="Animation" id="Animation_ep7mk"]
+resource_name = "color"
+length = 6.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CSGSphere3D:material")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.9666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [SubResource("StandardMaterial3D_33d3s"), SubResource("StandardMaterial3D_33d3s")]
+}
+
+[sub_resource type="Animation" id="Animation_opdiu"]
+resource_name = "moving"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CSGSphere3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.0333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0.5, 0), Vector3(0, 0.2, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CSGSphere3D:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.0333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.87, 0.87, 0.87), Vector3(0.7007, 0.7007, 0.7007)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D27:height")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.5, 2.78),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.389, 0.46, 0.702]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D25:height")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.5, 2.78),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.389, 0.46, 0.702]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D23:height")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1.5, 2.78),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.389, 0.46, 0.702]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D21:height")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1.5, 2.78),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.389, 0.46, 0.702]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D19:height")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1.5, 2.78),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.389, 0.46, 0.702]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D17:height")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 1.5, 2.78),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.389, 0.46, 0.702]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D15:height")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 1.5, 2.78),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.389, 0.46, 0.702]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D13:height")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 1.5, 2.78),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.389, 0.46, 0.702]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D11:height")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 1.5, 2.78),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.389, 0.46, 0.702]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D9:height")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 1.5, 2.78),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.389, 0.46, 0.702]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D6:height")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 1.5, 2.78),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.389, 0.46, 0.702]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D5:height")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 1.5, 2.78),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.389, 0.46, 0.702]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D:height")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 1.5, 2.78),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.389, 0.46, 0.702]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D4:height")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0, 1.5, 2.78),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.389, 0.46, 0.702]
+}
+
+[sub_resource type="Animation" id="Animation_ap5t5"]
+resource_name = "new_animation"
+length = 6.0
+loop_mode = 1
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o1ich"]
+_data = {
+&"RESET": SubResource("Animation_o8dsa"),
+&"color": SubResource("Animation_ep7mk"),
+&"moving": SubResource("Animation_opdiu"),
+&"new_animation": SubResource("Animation_ap5t5")
+}
+
+[node name="PlayerN" type="CharacterBody3D" unique_id=618627991]
+script = ExtResource("1_33d3s")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="." unique_id=233199843]
+transform = Transform3D(0.7007, 0, 0, 0, 0.7007, 0, 0, 0, 0.7007, 0, 0.5, 0)
+material_override = ExtResource("1_hwxmi")
+radial_segments = 6
+rings = 5
+smooth_faces = false
+material = SubResource("StandardMaterial3D_33d3s")
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="CSGSphere3D" unique_id=1559146895]
+transform = Transform3D(1.1001966, 0, 0, 0, 1.1001966, 0, 0, 0, 1.1001966, 0, -0.57471263, 0)
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="CSGSphere3D/CSGCombiner3D" unique_id=2111392499]
+transform = Transform3D(0.87, 0, 0, 0, 0.3179658, -0.8098134, 0, 0.8098134, 0.3179658, 0, 0.6508407, 0.5)
+radius = 0.043
+height = 0.389
+sides = 15
+cone = true
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="CSGSphere3D/CSGCombiner3D" unique_id=914254641]
+transform = Transform3D(0.87, 0, 0, 0, 0.2833449, 0.8225665, 0, -0.8225665, 0.2833449, 0, 0.66975737, -0.5)
+radius = 0.043
+height = 0.389
+sides = 15
+cone = true
+material = ExtResource("1_hwxmi")
+
+[node name="CSGCylinder3D4" type="CSGCylinder3D" parent="CSGSphere3D/CSGCombiner3D" unique_id=207267637]
+transform = Transform3D(0.5605612, -0.6462444, 0.15823844, 0.1794419, 0.346093, 0.7777662, -0.6406808, -0.4684953, 0.3562869, -0.45045096, 0.7001631, -0.28047597)
+radius = 0.043
+height = 0.389
+sides = 15
+cone = true
+
+[node name="CSGCylinder3D8" type="CSGCylinder3D" parent="CSGSphere3D/CSGCombiner3D" unique_id=1379221238]
+transform = Transform3D(-0.72319746, -0.48176688, -0.042261817, -0.27750525, 0.35112706, 0.7460567, -0.396076, 0.6336485, -0.44554836, -0.40799153, 0.6720734, 0.27265894)
+radius = 0.043
+height = 0.389
+sides = 15
+cone = true
+
+[node name="CSGCylinder3D5" type="CSGCylinder3D" parent="CSGSphere3D/CSGCombiner3D" unique_id=1695453625]
+transform = Transform3D(-0.41876364, 0.67941487, 0.3463126, -0.18171, 0.29481164, -0.7981025, -0.7406204, -0.45648825, 1.0871323e-07, 0.43768376, 0.674135, -0.27186048)
+radius = 0.043
+height = 0.389
+sides = 15
+cone = true
+
+[node name="CSGCylinder3D7" type="CSGCylinder3D" parent="CSGSphere3D/CSGCombiner3D" unique_id=565884738]
+transform = Transform3D(0.45039776, 0.7443398, -1.5625182e-07, -0.19745104, 0.11947685, -0.83883154, -0.7176733, 0.43426195, 0.23078482, 0.44932413, 0.65647435, 0.26721334)
+radius = 0.043
+height = 0.389
+sides = 15
+cone = true
+
+[node name="CSGCylinder3D6" type="CSGCylinder3D" parent="CSGSphere3D/CSGCombiner3D" unique_id=380499470]
+transform = Transform3D(3.8028872e-08, -2.2817343e-07, -0.87, -1.3136635e-07, -0.87, 2.2817343e-07, -0.87, 1.3136633e-07, -3.8028908e-08, 0, 0.058750033, 0)
+radius = 0.043
+height = 0.389
+sides = 15
+cone = true
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="CSGSphere3D/CSGCombiner3D" unique_id=1729520537]
+transform = Transform3D(0.87, 0, 0, 0, 0.87, 0, 0, 0, 0.87, 0, 0.89446986, 0)
+radius = 0.043
+height = 0.389
+sides = 15
+cone = true
+
+[node name="CSGCylinder3D9" type="CSGCylinder3D" parent="CSGSphere3D/CSGCombiner3D" unique_id=102675703]
+transform = Transform3D(0.87, 0, 0, 0, 0.66777444, -0.55765337, 0, 0.55765337, 0.66777444, 0, 0.8023751, 0.21582234)
+radius = 0.043
+height = 0.389
+sides = 15
+cone = true
+
+[node name="CSGCylinder3D10" type="CSGCylinder3D" parent="CSGSphere3D/CSGCombiner3D" unique_id=1519523888]
+transform = Transform3D(0.49514833, 0.4875034, 0.5235156, 0, 0.63669175, -0.59289426, -0.71535176, 0.3374375, 0.3623642, 0.24025199, 0.85835946, 0.12007037)
+radius = 0.043
+height = 0.389
+sides = 15
+cone = true
+
+[node name="CSGCylinder3D11" type="CSGCylinder3D" parent="CSGSphere3D/CSGCombiner3D" unique_id=1670674033]
+transform = Transform3D(-0.59691626, 0.43132895, 0.46319148, -2.1319142e-08, 0.63669175, -0.59289426, -0.63292265, -0.4067911, -0.43684095, 0.24025199, 0.85835946, -0.14453611)
+radius = 0.043
+height = 0.389
+sides = 15
+cone = true
+
+[node name="CSGCylinder3D12" type="CSGCylinder3D" parent="CSGSphere3D/CSGCombiner3D" unique_id=1778667853]
+transform = Transform3D(-0.42044237, -0.5190629, -0.55740637, -5.904428e-08, 0.6366918, -0.59289426, 0.76166147, -0.28652623, -0.30769223, -0.2710283, 0.9103519, -0.14453611)
+radius = 0.043
+height = 0.389
+sides = 15
+cone = true
+
+[node name="CSGCylinder3D13" type="CSGCylinder3D" parent="CSGSphere3D/CSGCombiner3D" unique_id=2075199830]
+transform = Transform3D(-0.8595063, -0.09180875, -0.09859061, -7.157443e-08, 0.63669175, -0.59289426, 0.13471806, -0.58574295, -0.62901217, -0.018954605, 0.9103519, -0.2919204)
+radius = 0.043
+height = 0.389
+sides = 15
+cone = true
+
+[node name="CSGCylinder3D14" type="CSGCylinder3D" parent="CSGSphere3D/CSGCombiner3D" unique_id=2065128347]
+transform = Transform3D(0.35513666, -0.5412479, -0.5812303, -7.3963356e-08, 0.63669175, -0.59289426, 0.79421526, 0.24202132, 0.25989947, -0.23445562, 0.8933736, 0.12027457)
+radius = 0.043
+height = 0.389
+sides = 15
+cone = true
+
+[node name="CSGCylinder3D15" type="CSGCylinder3D" parent="CSGSphere3D/CSGCombiner3D" unique_id=228203706]
+transform = Transform3D(-0.8699492, 0.0034351742, -0.008748741, -0.009398984, -0.31794724, 0.8097662, 5.6717546e-08, 0.8098134, 0.3179658, -0.001717528, 0.33589596, 0.5)
+radius = 0.043
+height = 0.389
+sides = 15
+cone = true
+
+[node name="CSGCylinder3D16" type="CSGCylinder3D" parent="CSGSphere3D/CSGCombiner3D" unique_id=1733594360]
+transform = Transform3D(-0.8699492, 0.0030611707, 0.00888651, -0.00939898, -0.28332818, -0.8225186, -8.1025064e-08, -0.8225666, 0.28334472, -0.0015131636, 0.31698042, -0.5)
+radius = 0.043
+height = 0.389
+sides = 15
+cone = true
+
+[node name="CSGCylinder3D17" type="CSGCylinder3D" parent="CSGSphere3D/CSGCombiner3D" unique_id=255065778]
+transform = Transform3D(-0.5585899, 0.6499457, -0.14982668, -0.1854874, -0.33909115, -0.7794303, -0.6406808, -0.46849528, 0.35628688, 0.4195252, 0.33102387, -0.2630933)
+radius = 0.043
+height = 0.389
+sides = 15
+cone = true
+
+[node name="CSGCylinder3D18" type="CSGCylinder3D" parent="CSGSphere3D/CSGCombiner3D" unique_id=2117204531]
+transform = Transform3D(0.7201573, 0.48553225, 0.050319258, 0.28530216, -0.34590203, -0.7455565, -0.39607608, 0.6336484, -0.4455485, 0.40628502, 0.33708096, 0.24257922)
+radius = 0.043
+height = 0.389
+sides = 15
+cone = true
+
+[node name="CSGCylinder3D19" type="CSGCylinder3D" parent="CSGSphere3D/CSGCombiner3D" unique_id=1353835037]
+transform = Transform3D(0.41677615, -0.67619026, -0.3549146, 0.1862235, -0.30213434, 0.79431456, -0.74062026, -0.45648825, 1.5372265e-07, -0.42259592, 0.3120172, -0.26044053)
+radius = 0.043
+height = 0.389
+sides = 15
+cone = true
+
+[node name="CSGCylinder3D20" type="CSGCylinder3D" parent="CSGSphere3D/CSGCombiner3D" unique_id=1297028466]
+transform = Transform3D(-0.45250463, -0.7430057, -0.009062077, 0.19257365, -0.12751123, 0.8387826, -0.7176733, 0.43426192, 0.23078477, -0.4509546, 0.3254084, 0.26721334)
+radius = 0.043
+height = 0.389
+sides = 15
+cone = true
+
+[node name="CSGCylinder3D21" type="CSGCylinder3D" parent="CSGSphere3D/CSGCombiner3D" unique_id=1920522346]
+transform = Transform3D(-0.8699492, 0.00939896, 0, -0.00939896, -0.8699492, 0, 0, 0, 0.87, -8.044123e-05, 0.18437043, 0)
+radius = 0.043
+height = 0.389
+sides = 15
+cone = true
+
+[node name="CSGCylinder3D22" type="CSGCylinder3D" parent="CSGSphere3D/CSGCombiner3D" unique_id=369888200]
+transform = Transform3D(-0.86994916, 0.007214245, -0.006024553, -0.009398967, -0.66773546, 0.5576208, 5.6717546e-09, 0.5576533, 0.66777444, -8.044123e-05, 0.18437043, 0.21582234)
+radius = 0.043
+height = 0.389
+sides = 15
+cone = true
+
+[node name="CSGCylinder3D23" type="CSGCylinder3D" parent="CSGSphere3D/CSGCombiner3D" unique_id=2133650706]
+transform = Transform3D(-0.4951195, -0.48059645, -0.52989036, -0.0053493306, -0.64192134, 0.5872039, -0.7153517, 0.33743754, 0.36236426, -0.2397136, 0.12579378, 0.12007037)
+radius = 0.043
+height = 0.389
+sides = 15
+cone = true
+
+[node name="CSGCylinder3D24" type="CSGCylinder3D" parent="CSGSphere3D/CSGCombiner3D" unique_id=1227120985]
+transform = Transform3D(0.5968812, -0.42442542, -0.4695699, 0.006448621, -0.64131457, 0.5878555, -0.63292277, -0.40679082, -0.43684098, -0.2397136, 0.12579378, -0.14453611)
+radius = 0.043
+height = 0.389
+sides = 15
+cone = true
+
+[node name="CSGCylinder3D25" type="CSGCylinder3D" parent="CSGSphere3D/CSGCombiner3D" unique_id=235502934]
+transform = Transform3D(0.42041785, 0.52591103, 0.55096865, 0.004542209, -0.63104695, 0.59888154, 0.7616614, -0.2865263, -0.3076922, 0.27209857, 0.07932797, -0.14453611)
+radius = 0.043
+height = 0.389
+sides = 15
+cone = true
+
+[node name="CSGCylinder3D26" type="CSGCylinder3D" parent="CSGSphere3D/CSGCombiner3D" unique_id=900720860]
+transform = Transform3D(0.8594561, 0.098681875, 0.09217959, 0.0092857005, -0.63566273, 0.59392476, 0.13471809, -0.58574295, -0.62901217, 0.020039573, 0.076604724, -0.2919204)
+radius = 0.043
+height = 0.389
+sides = 15
+cone = true
+
+[node name="CSGCylinder3D27" type="CSGCylinder3D" parent="CSGSphere3D/CSGCombiner3D" unique_id=56510217]
+transform = Transform3D(-0.3551158, 0.54809475, 0.5747912, -0.0038365987, -0.63080734, 0.5991389, 0.7942154, 0.24202119, 0.2598994, 0.23534459, 0.09591013, 0.12027457)
+radius = 0.043
+height = 0.389
+sides = 15
+cone = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CSGSphere3D" unique_id=1292612552]
+transform = Transform3D(1.1494253, 0, 0, 0, 1.1494253, 0, 0, 0, 1.1494253, 0, -0.57471263, 0)
+shape = SubResource("CapsuleShape3D_hwxmi")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=133715833]
+libraries/ = SubResource("AnimationLibrary_o1ich")
+
+[node name="TwistPivot" type="Node3D" parent="." unique_id=1829663726]
+
+[node name="PitchPivot" type="Node3D" parent="TwistPivot" unique_id=1854077001]
+
+[node name="Camera3D" type="Camera3D" parent="TwistPivot/PitchPivot" unique_id=1909214669]
+transform = Transform3D(1, 0, 0, 0, 0.9218632, 0.3875156, 0, -0.3875156, 0.9218632, 0, 1.5132178, 1.7458622)
+current = true
