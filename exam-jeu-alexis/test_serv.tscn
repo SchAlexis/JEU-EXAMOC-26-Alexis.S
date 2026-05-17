@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://oggnjwe2ltlk"]
+
+[ext_resource type="Script" uid="uid://bewhtq3fim0ul" path="res://ServerRack.gd" id="1_vswxk"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2mrg5"]
+albedo_color = Color(0.08, 0.08, 0.1, 1)
+metallic = 0.8
+roughness = 0.5
+
+[node name="test serv" type="Node3D" unique_id=2057983227]
+
+[node name="ServerRack" type="CSGBox3D" parent="." unique_id=98900965]
+size = Vector3(1, 2.4, 0.8)
+material = SubResource("StandardMaterial3D_2mrg5")
+script = ExtResource("1_vswxk")
+metadata/_custom_type_script = "uid://bewhtq3fim0ul"

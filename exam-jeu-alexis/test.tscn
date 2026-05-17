@@ -6,15 +6,26 @@
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_8uh7m"]
 ground_curve = 0.062766925
 
-[sub_resource type="Sky" id="Sky_uu6xs"]
+[sub_resource type="Sky" id="Sky_8uh7m"]
 sky_material = SubResource("ProceduralSkyMaterial_8uh7m")
 
 [sub_resource type="Environment" id="Environment_6uqi0"]
-background_mode = 2
+background_mode = 1
+background_color = Color(0.023529412, 0.039215688, 0.078431375, 1)
 background_energy_multiplier = 0.3
-sky = SubResource("Sky_uu6xs")
+sky = SubResource("Sky_8uh7m")
+ambient_light_source = 2
+ambient_light_color = Color(0.06666667, 0.13333334, 0.2, 1)
+ambient_light_energy = 0.3
 tonemap_mode = 2
 glow_enabled = true
+glow_intensity = 0.8
+glow_bloom = 0.3
+glow_hdr_threshold = 0.7
+fog_enabled = true
+fog_light_color = Color(0.3180908, 0.1943329, 0.40498298, 1)
+fog_light_energy = 0.03
+fog_density = 0.015
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ppyta"]
 albedo_color = Color(0.60933006, 0.6093301, 0.60933006, 1)
@@ -55,4 +66,4 @@ size = Vector3(10, 3, 1)
 material = ExtResource("1_37kl0")
 
 [node name="PlayerN" parent="." unique_id=618627991 instance=ExtResource("2_8uh7m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.26600552, 0.69281626, 1.1889801)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.26600552, 1.4428163, 1.1889801)

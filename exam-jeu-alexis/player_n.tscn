@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://cscg36pk42owd"]
 
 [ext_resource type="Script" uid="uid://y81ibjg5qxdy" path="res://player_n.gd" id="1_33d3s"]
-[ext_resource type="Material" uid="uid://ds2xh4padmpci" path="res://PlayerNColor.tres" id="1_hwxmi"]
+[ext_resource type="Material" uid="uid://ds2xh4padmpci" path="res://Material/PlayerNColor.tres" id="1_hwxmi"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hwxmi"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_33d3s"]
 albedo_color = Color(0.18431373, 0.9882353, 0.24705882, 1)
@@ -13,10 +15,9 @@ emission_enabled = true
 emission = Color(0.34117648, 0.9254902, 0, 1)
 emission_energy_multiplier = 0.1
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hwxmi"]
-
 [sub_resource type="Animation" id="Animation_o8dsa"]
-length = 0.001
+length = 4.0
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -24,106 +25,106 @@ tracks/0/path = NodePath("CSGSphere3D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 1.2666667, 2.4666667, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(0, 0.5, 0)]
+"values": [Vector3(0, 0.5, 0), Vector3(0, 0.25, 0), Vector3(0, 0.6, 0), Vector3(0, 0.5, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("CSGSphere3D:material")
+tracks/1/path = NodePath("CSGSphere3D:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [SubResource("StandardMaterial3D_33d3s")]
+"times": PackedFloat32Array(0, 1.6333333, 3.0666666, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0.7007, 0.7007, 0.7007), Vector3(0.85, 0.85, 0.85), Vector3(0.6, 0.6, 0.6), Vector3(0.7007, 0.7007, 0.7007)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("CSGSphere3D:scale")
+tracks/2/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D:height")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 1.24, 2.59),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector3(0.7007, 0.7007, 0.7007)]
+"values": [0.389, 0.8, 0.2]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D27:height")
+tracks/3/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D4:height")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 1.24, 2.59),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [0.389]
+"values": [0.389, 0.8, 0.2]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D25:height")
+tracks/4/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D5:height")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 1.24, 2.59),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [0.389]
+"values": [0.389, 0.8, 0.2]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D23:height")
+tracks/5/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D6:height")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 1.24, 2.59),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [0.389]
+"values": [0.389, 0.8, 0.2]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D21:height")
+tracks/6/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D9:height")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 1.24, 2.59),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [0.389]
+"values": [0.389, 0.8, 0.2]
 }
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D19:height")
+tracks/7/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D11:height")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 1.24, 2.59),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [0.389]
+"values": [0.389, 0.8, 0.2]
 }
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D17:height")
+tracks/8/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D13:height")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 1.24, 2.59),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [0.389]
+"values": [0.389, 0.8, 0.2]
 }
 tracks/9/type = "value"
 tracks/9/imported = false
@@ -132,112 +133,117 @@ tracks/9/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D15:height")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 1.24, 2.59),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [0.389]
+"values": [0.389, 0.8, 0.2]
 }
 tracks/10/type = "value"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D13:height")
+tracks/10/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D17:height")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 1.24, 2.59),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [0.389]
+"values": [0.389, 0.8, 0.2]
 }
 tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D11:height")
+tracks/11/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D19:height")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 1.24, 2.59),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [0.389]
+"values": [0.389, 0.8, 0.2]
 }
 tracks/12/type = "value"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D9:height")
+tracks/12/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D21:height")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 1.24, 2.59),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [0.389]
+"values": [0.389, 0.8, 0.2]
 }
 tracks/13/type = "value"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D6:height")
+tracks/13/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D23:height")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 1.24, 2.59),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [0.389]
+"values": [0.389, 0.8, 0.2]
 }
 tracks/14/type = "value"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D5:height")
+tracks/14/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D25:height")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 1.24, 2.59),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [0.389]
+"values": [0.389, 0.8, 0.2]
 }
 tracks/15/type = "value"
 tracks/15/imported = false
 tracks/15/enabled = true
-tracks/15/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D:height")
+tracks/15/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D27:height")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 1.24, 2.59),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [0.389]
+"values": [0.389, 0.8, 0.2]
 }
 tracks/16/type = "value"
 tracks/16/imported = false
 tracks/16/enabled = true
-tracks/16/path = NodePath("CSGSphere3D/CSGCombiner3D/CSGCylinder3D4:height")
+tracks/16/path = NodePath("OmniLight3D:position")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [0.389]
+"values": [Vector3(0, 0.37259448, 0)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("OmniLight3D:light_color")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.09411765, 0.9098039, 0.14117648, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_ep7mk"]
 resource_name = "color"
 length = 6.0
 loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CSGSphere3D:material")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2.9666667),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [SubResource("StandardMaterial3D_33d3s"), SubResource("StandardMaterial3D_33d3s")]
-}
+
+[sub_resource type="Animation" id="Animation_33d3s"]
+resource_name = "light p"
+length = 4.0
+loop_mode = 1
 
 [sub_resource type="Animation" id="Animation_opdiu"]
 resource_name = "moving"
@@ -435,6 +441,30 @@ tracks/15/keys = {
 "update": 0,
 "values": [0.389, 0.46, 0.702]
 }
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("OmniLight3D:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0, 2.05),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0.37259448, 0), Vector3(0, 0.17905003, 0)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("OmniLight3D:light_color")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0, 2.0333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.09411765, 0.9098039, 0.14117648, 1), Color(0.5701327, 0.8527631, 3.080368e-06, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_ap5t5"]
 resource_name = "new_animation"
@@ -445,12 +475,17 @@ loop_mode = 1
 _data = {
 &"RESET": SubResource("Animation_o8dsa"),
 &"color": SubResource("Animation_ep7mk"),
+&"light p": SubResource("Animation_33d3s"),
 &"moving": SubResource("Animation_opdiu"),
 &"new_animation": SubResource("Animation_ap5t5")
 }
 
 [node name="PlayerN" type="CharacterBody3D" unique_id=618627991]
 script = ExtResource("1_33d3s")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1292612552]
+transform = Transform3D(0.8054023, 0, 0, 0, 0.8054023, 0, 0, 0, 0.8054023, 0, 0.09729886, 0)
+shape = SubResource("CapsuleShape3D_hwxmi")
 
 [node name="CSGSphere3D" type="CSGSphere3D" parent="." unique_id=233199843]
 transform = Transform3D(0.7007, 0, 0, 0, 0.7007, 0, 0, 0, 0.7007, 0, 0.5, 0)
@@ -653,12 +688,9 @@ height = 0.389
 sides = 15
 cone = true
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CSGSphere3D" unique_id=1292612552]
-transform = Transform3D(1.1494253, 0, 0, 0, 1.1494253, 0, 0, 0, 1.1494253, 0, -0.57471263, 0)
-shape = SubResource("CapsuleShape3D_hwxmi")
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=133715833]
 libraries/ = SubResource("AnimationLibrary_o1ich")
+autoplay = &"moving"
 
 [node name="TwistPivot" type="Node3D" parent="." unique_id=1829663726]
 
@@ -667,3 +699,10 @@ libraries/ = SubResource("AnimationLibrary_o1ich")
 [node name="Camera3D" type="Camera3D" parent="TwistPivot/PitchPivot" unique_id=1909214669]
 transform = Transform3D(1, 0, 0, 0, 0.9218632, 0.3875156, 0, -0.3875156, 0.9218632, 0, 1.5132178, 1.7458622)
 current = true
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=303155390]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.37259448, 0)
+light_color = Color(0.09411765, 0.9098039, 0.14117648, 1)
+light_energy = 0.7
+light_bake_mode = 1
+omni_range = 1.75

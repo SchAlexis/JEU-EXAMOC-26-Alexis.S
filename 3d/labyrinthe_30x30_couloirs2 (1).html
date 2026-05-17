@@ -1,0 +1,154 @@
+
+<h2 class="sr-only">Labyrinthe carré 30×30 avec couloirs de largeur 2, départ au centre et 2 sorties</h2>
+<div style="padding:1rem 0">
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;align-items:center">
+  <button onclick="generateMaze()" style="padding:6px 14px;font-size:13px">Régénérer ↗</button>
+  <label style="font-size:13px;color:var(--color-text-secondary);display:flex;align-items:center;gap:6px">
+    <input type="checkbox" id="showSolution" onchange="toggleSolution()"> Afficher solution
+  </label>
+  <span style="font-size:12px;color:var(--color-text-secondary);margin-left:auto">🟢 Départ &nbsp; 🔴 Sortie 1 &nbsp; 🟠 Sortie 2</span>
+</div>
+<canvas id="mazeCanvas" style="width:100%;border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-tertiary);display:block"></canvas>
+</div>
+<script>
+const COLS=15,ROWS=15;
+let walls,solution1,solution2,showSol=false;
+
+function idx(x,y){return y*COLS+x}
+
+function generateMaze(){
+  walls=new Uint8Array(COLS*ROWS*4);
+  const visited=new Uint8Array(COLS*ROWS);
+  const stack=[];
+  const sx=Math.floor(COLS/2),sy=Math.floor(ROWS/2);
+  visited[idx(sx,sy)]=1;stack.push([sx,sy]);
+  const D=[[0,-1,0],[1,0,1],[0,1,2],[-1,0,3]];
+  const opp=[2,3,0,1];
+  while(stack.length){
+    const [cx,cy]=stack[stack.length-1];
+    const nb=[];
+    for(let d=0;d<4;d++){
+      const nx=cx+D[d][0],ny=cy+D[d][1];
+      if(nx>=0&&nx<COLS&&ny>=0&&ny<ROWS&&!visited[idx(nx,ny)])
+        nb.push([nx,ny,D[d][2],d]);
+    }
+    if(nb.length){
+      const [nx,ny,wall,d]=nb[Math.floor(Math.random()*nb.length)];
+      walls[idx(cx,cy)*4+wall]=1;
+      walls[idx(nx,ny)*4+opp[d]]=1;
+      visited[idx(nx,ny)]=1;
+      stack.push([nx,ny]);
+    } else stack.pop();
+  }
+  computeSolutions();
+  render();
+}
+
+function bfs(sx,sy,ex,ey){
+  const prev=new Int32Array(COLS*ROWS).fill(-1);
+  const q=[[sx,sy]];prev[idx(sx,sy)]=idx(sx,sy);
+  const D=[[0,-1,0],[1,0,1],[0,1,2],[-1,0,3]];
+  let head=0;
+  while(head<q.length){
+    const [cx,cy]=q[head++];
+    if(cx===ex&&cy===ey){
+      const path=[];let cur=idx(cx,cy);
+      while(cur!==idx(sx,sy)){path.push(cur);cur=prev[cur];}
+      path.push(idx(sx,sy));return path.reverse();
+    }
+    for(let d=0;d<4;d++){
+      if(!walls[idx(cx,cy)*4+d]) continue;
+      const nx=cx+D[d][0],ny=cy+D[d][1];
+      if(nx<0||nx>=COLS||ny<0||ny>=ROWS||prev[idx(nx,ny)]!==-1) continue;
+      prev[idx(nx,ny)]=idx(cx,cy);q.push([nx,ny]);
+    }
+  }
+  return[];
+}
+
+function computeSolutions(){
+  const sx=Math.floor(COLS/2),sy=Math.floor(ROWS/2);
+  solution1=bfs(sx,sy,0,0);
+  solution2=bfs(sx,sy,COLS-1,ROWS-1);
+}
+
+function toggleSolution(){
+  showSol=document.getElementById('showSolution').checked;
+  render();
+}
+
+function render(){
+  const canvas=document.getElementById('mazeCanvas');
+  const dpr=window.devicePixelRatio||1;
+  const W=canvas.offsetWidth||640;
+  const cellPx=Math.floor(W/(COLS*2+1));
+  const wall=Math.max(2,Math.round(cellPx*0.22));
+  const corridor=cellPx*2;
+  const total=(corridor+wall)*COLS+wall;
+  canvas.width=total*dpr;canvas.height=total*dpr;
+  canvas.style.width=total+'px';canvas.style.height=total+'px';
+  const ctx=canvas.getContext('2d');
+  ctx.scale(dpr,dpr);
+
+  const isDark=window.matchMedia('(prefers-color-scheme:dark)').matches;
+  const wallCol=isDark?'#c8c8e0':'#1a1a2e';
+  const bgCol=isDark?'#0d0d1a':'#f8f8fc';
+  const passageCol=isDark?'#1e1e36':'#ffffff';
+
+  ctx.fillStyle=wallCol;ctx.fillRect(0,0,total,total);
+
+  for(let y=0;y<ROWS;y++){
+    for(let x=0;x<COLS;x++){
+      const px=wall+x*(corridor+wall);
+      const py=wall+y*(corridor+wall);
+      ctx.fillStyle=passageCol;
+      ctx.fillRect(px,py,corridor,corridor);
+      if(walls[idx(x,y)*4+1]&&x<COLS-1) ctx.fillRect(px+corridor,py,wall,corridor);
+      if(walls[idx(x,y)*4+2]&&y<ROWS-1) ctx.fillRect(px,py+corridor,corridor,wall);
+    }
+  }
+
+  // Exits
+  ctx.fillStyle=passageCol;
+  ctx.fillRect(0,wall,wall,corridor);
+  ctx.fillRect(wall+(COLS-1)*(corridor+wall),total-wall,corridor,wall);
+
+  // Solutions
+  if(showSol){
+    [[solution1,'#1D9E75'],[solution2,'#D85A30']].forEach(([sol,col])=>{
+      if(!sol||!sol.length) return;
+      ctx.strokeStyle=col;ctx.lineWidth=corridor*0.45;
+      ctx.lineCap='round';ctx.lineJoin='round';ctx.globalAlpha=0.5;
+      ctx.beginPath();
+      sol.forEach((c,i)=>{
+        const cx=c%COLS,cy=Math.floor(c/COLS);
+        const px=wall+cx*(corridor+wall)+corridor/2;
+        const py=wall+cy*(corridor+wall)+corridor/2;
+        i===0?ctx.moveTo(px,py):ctx.lineTo(px,py);
+      });
+      ctx.stroke();ctx.globalAlpha=1;
+    });
+  }
+
+  // Markers
+  const r=corridor*0.38;
+  function drawMarker(cx,cy,col,label){
+    const px=wall+cx*(corridor+wall)+corridor/2;
+    const py=wall+cy*(corridor+wall)+corridor/2;
+    ctx.fillStyle=col;
+    ctx.beginPath();ctx.arc(px,py,r,0,Math.PI*2);ctx.fill();
+    if(r>4){
+      ctx.fillStyle='white';
+      ctx.font=`bold ${Math.round(r*1.1)}px sans-serif`;
+      ctx.textAlign='center';ctx.textBaseline='middle';
+      ctx.fillText(label,px,py+1);
+    }
+  }
+  drawMarker(Math.floor(COLS/2),Math.floor(ROWS/2),'#1D9E75','S');
+  drawMarker(0,0,'#E24B4A','1');
+  drawMarker(COLS-1,ROWS-1,'#D85A30','2');
+}
+
+generateMaze();
+window.addEventListener('resize',()=>render());
+</script>
